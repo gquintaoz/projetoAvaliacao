@@ -11,5 +11,9 @@
    ```sh
    composer create-project laravel/laravel avaliacao-de-desempenho
    ```
+### Agora vamos começar a trabalhar dentro do laravel, eu escolhi o VS Code para codificar.
+
+
+
 
 
