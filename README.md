@@ -8,7 +8,7 @@
 
 ## Instalando laravel
  **Execute o seguinte comando:**
-   ```sh
+```sh
    composer create-project laravel/laravel avaliacao-de-desempenho
    ```
 ### Agora vamos começar a trabalhar dentro do laravel, eu escolhi o VS Code para codificar.
@@ -27,7 +27,18 @@
 ```sh
    php artisan make:model Dimensao -m
    ```
-
+### Agora vamos trabalhar na tabela do nosso banco de dados(database\migrations\2024_05_20_115249_create_dimensaos_table.php). 
+**Adicionando os atributos necessários, teremos assim nossa tabela:**
+```php
+   public function up(): void
+    {
+        Schema::create('dimensao', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nome');
+            $table->timestamps();
+        });
+    }
+   ```
 
 
 
