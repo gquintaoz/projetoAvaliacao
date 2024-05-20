@@ -39,6 +39,59 @@
         });
     }
    ```
+### Controller e model
+**Dentro do model faça uma protected $fillable:**
+```php
+    protected $fillable = [
+        'nome'
+    ];
+   ```
+#### No controller agora vamos fazer as funções de um CRUD(create, read, update, delete);
+**No final ficará assim:**
+```php
+     public function index()
+    {
+        return Dimensao::all();
+    }
+
+    public function store(Request $request)
+    {
+        $dimensao = Dimensao::all();
+        $validateData = $request->validate([
+            "nome"=> 'required|string'
+        ]);
+        $dimensao = Dimensao::create([
+            'nome'=> $validateData['nome']
+        ]);
+        
+        return response() -> json(['message'=>'Usúario criado com sucesso!', 'nome' => $dimensao], 200);
+        
+    }
+
+    public function show($id)
+    {
+        $dimensao = Dimensao::find($id);
+        return response() -> json(['message'=> 'Usuário encontrado com sucesso!', 'dimensao'=> $dimensao], 200);
+    }
+
+    public function update(Request $request, string $id)
+    {
+        $dimensao = Dimensao::find($id);
+        $validateData = $request->validate([
+            'name'=> 'sometimes|required|string'
+        ]);
+        $dimensao ->update($validateData);
+        return response() -> json(['message'=> 'Usuário atualizado com sucesso!', 'dimensao'=> $dimensao], 200);
+    }
+
+    public function destroy(string $id)
+    {
+        $dimensao = Dimensao::find($id);
+        $dimensao->delete();
+        return response() -> json(['message'=> 'Usuário removido com sucesso!','dimensao'=> $dimensao], 200);
+    }
+   ```
+
 
 
 
