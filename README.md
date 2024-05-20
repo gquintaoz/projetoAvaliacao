@@ -44,7 +44,7 @@
     }
    ```
 
-### Controller e model
+## Controller e model
 **Dentro do model faça uma protected $fillable:**
 ```php
     protected $fillable = [
@@ -69,14 +69,14 @@
             'nome'=> $validateData['nome']
         ]);
         
-        return response() -> json(['message'=>'Usúario criado com sucesso!', 'nome' => $dimensao], 200);
+        return response() -> json(['message'=>'Dimensão criada com sucesso!', 'nome' => $dimensao], 200);
         
     }
 
     public function show($id)
     {
         $dimensao = Dimensao::find($id);
-        return response() -> json(['message'=> 'Usuário encontrado com sucesso!', 'dimensao'=> $dimensao], 200);
+        return response() -> json(['message'=> 'Dimensão encontrada com sucesso!', 'dimensao'=> $dimensao], 200);
     }
 
     public function update(Request $request, string $id)
@@ -86,14 +86,14 @@
             'name'=> 'sometimes|required|string'
         ]);
         $dimensao ->update($validateData);
-        return response() -> json(['message'=> 'Usuário atualizado com sucesso!', 'dimensao'=> $dimensao], 200);
+        return response() -> json(['message'=> 'Dimensão atualizada com sucesso!', 'dimensao'=> $dimensao], 200);
     }
 
     public function destroy(string $id)
     {
         $dimensao = Dimensao::find($id);
         $dimensao->delete();
-        return response() -> json(['message'=> 'Usuário removido com sucesso!','dimensao'=> $dimensao], 200);
+        return response() -> json(['message'=> 'Dimensão removida com sucesso!','dimensao'=> $dimensao], 200);
     }
    ```
 **Configurando as rotas na pasta routes\api.php:**
