@@ -27,6 +27,10 @@
 ```sh
    php artisan make:model Dimensao -m
    ```
+**Adicionando no banco de dados:**
+```sh
+   php artisan migrate
+   ```
 ### Agora vamos trabalhar na tabela do nosso banco de dados(database\migrations\2024_05_20_115249_create_dimensaos_table.php). 
 **Adicionando os atributos necessários, teremos assim nossa tabela:**
 ```php
@@ -39,6 +43,7 @@
         });
     }
    ```
+
 ### Controller e model
 **Dentro do model faça uma protected $fillable:**
 ```php
@@ -46,7 +51,7 @@
         'nome'
     ];
    ```
-#### No controller agora vamos fazer as funções de um CRUD(create, read, update, delete);
+### Na pasta DimensaoController agora vamos fazer as funções de um CRUD(create, read, update, delete);
 **No final ficará assim:**
 ```php
      public function index()
@@ -91,7 +96,15 @@
         return response() -> json(['message'=> 'Usuário removido com sucesso!','dimensao'=> $dimensao], 200);
     }
    ```
-
+**Configurando as rotas na pasta routes\api.php:**
+```php
+   Route::get('dimensao', [DimensaoController::class, 'index']);
+   Route::post('dimensao/store', [DimensaoController::class, 'store']);
+   Route::get('dimensao/{id}', [DimensaoController::class, 'show']);
+   Route::put('dimensao/{id}', [DimensaoController::class, 'update']);
+   Route::patch('dimensao/{id}', [DimensaoController::class, 'update']);
+   Route::delete('dimensao/{id}', [DimensaoController::class, 'destroy']);
+```
 
 
 
