@@ -17,6 +17,19 @@
    php artisan serve
    ```
 
+## Criando uma classe
+### O nosso projeto contém várias classes que no laravel, terão uma tabela, um controller e um model.
+**Criando o controller DimensãoController:**
+```sh
+   php artisan make:controller DimensaoController --resource 
+   ```
+**Criando o model e a tabela:**
+```sh
+   php artisan make:model Dimensao -m
+   ```
+
+
+
 
 
 
