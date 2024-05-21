@@ -159,8 +159,7 @@
    Route::patch('dimensao/{id}', [DimensaoController::class, 'update']);
    Route::delete('dimensao/{id}', [DimensaoController::class, 'destroy']);
 ```
-### Use o postman para testar o que cada rota está retornando, utilizando de forma correta os verbos GET, POST, DELETE, PUT, PATCH.
-## Então, realize o mesmo processo para todas as classes.
+### Use o postman para testar o que cada rota está retornando, utilizando de forma correta os verbos GET, POST, DELETE, PUT, PATCH. Então, realize o mesmo processo para todas as classes.
 
 
 
