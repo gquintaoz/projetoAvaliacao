@@ -1,4 +1,4 @@
-# Avaliação de desempenho - ROBOFLEX
+# Avaliação de desempenho e potencial - ROBOFLEX
 ## Instalando o composer.
 ### Se você ainda não instalou as dependências do Composer para o seu projeto Laravel, siga esses passos.
 **Crie uma pasta no seu computador, abra ela no terminal, e execute esse comando:**
