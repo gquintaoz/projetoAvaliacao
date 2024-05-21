@@ -32,8 +32,8 @@
 ```sh
    php artisan migrate
    ```
-### Agora vamos trabalhar na tabela do nosso banco de dados(database\migrations\2024_05_20_115249_create_dimensaos_table.php). 
-**Adicionando os atributos necessários, teremos anossa tabela assim:**
+### Agora vamos trabalhar na tabela do nosso banco de dados. 
+**Siga essa rota (database\migrations\2024_05_20_115249_create_dimensaos_table.php). Após isso, adicionando os atributos necessários, teremos anossa tabela assim:**
 ```php
         Schema::create('dimensao', function (Blueprint $table) {
             $table->increments('id');
