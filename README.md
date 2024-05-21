@@ -149,7 +149,7 @@
     }
    ```
 ## Rotas
-### Para cada função, temos que fazer uma rota que utilizando os verbos necessários, vão nos destinar corretamente.
+### Para cada função, temos que fazer uma rota, que utilizando os verbos necessários, vão nos destinar corretamente.
 **Configurando as rotas na pasta routes\api.php:**
 ```php
    Route::get('dimensao', [DimensaoController::class, 'index']);
