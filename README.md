@@ -149,6 +149,8 @@
         return response() -> json(['message'=> 'Dimensão removida com sucesso!','dimensao'=> $dimensao], 200);
     }
    ```
+## Rotas
+### Para cada função, temos que fazer uma rota que utilizando os verbos necessários, vão nos destinar corretamente.
 **Configurando as rotas na pasta routes\api.php:**
 ```php
    Route::get('dimensao', [DimensaoController::class, 'index']);
