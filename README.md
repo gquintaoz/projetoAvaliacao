@@ -34,12 +34,12 @@
    ```
 ### Agora vamos trabalhar na tabela do nosso banco de dados. 
 **Siga essa rota (database\migrations\2024_05_20_115249_create_dimensaos_table.php). Após isso, adicionando os atributos necessários, teremos anossa tabela assim:**
-~~~php
+```php
         Schema::create('dimensao', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome');
             $table->timestamps();
-   ~~~
+   ```
 
 ## Controller e model
 **Dentro do model faça uma protected $fillable e adicione os atriubutos da sua classe:**
