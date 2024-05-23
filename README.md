@@ -13,7 +13,7 @@
    ```
 ### Agora vamos começar a trabalhar dentro do laravel, eu escolhi o VS Code para codificar.
  **AInda no terminal dentro do caminho da pasta, para rodar seu programa em algum navegador:**
-```sh
+  ```sh
    php artisan serve
    ```
 
