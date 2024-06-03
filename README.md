@@ -7,6 +7,7 @@
    ```
 
 ## Instalando laravel
+### Ainda no terminal siga esses passos.
  **Execute o seguinte comando para criar o projeto:**
 ```sh
    composer create-project laravel/laravel avaliacao-de-desempenho
