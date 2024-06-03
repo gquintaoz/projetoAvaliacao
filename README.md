@@ -53,6 +53,7 @@
 ```php
      public function index()
     {
+
         return Dimensao::all();
     }
 
@@ -160,6 +161,32 @@
    Route::delete('dimensao/{id}', [DimensaoController::class, 'destroy']);
 ```
 ### Use o postman para testar o que cada rota está retornando, utilizando de forma correta os verbos GET, POST, DELETE, PUT, PATCH. Então, realize o mesmo processo para todas as classes.
+
+## Configurando chaves estrangeiras
+### Na tabela de Competência, temos o atributo 'dimensao_id', que indica a qual dimensão essa competência pertence.
+** Para conectar esse atributo com a tabela de dimensões, vamos declarar o atributo assim:**
+```php
+  $table->integer('dimensao_id')->unsigned();
+  $table->foreign('dimensao_id')->references('id')->on('dimensaos')->onDelete('cascade');
+```
+
+### No Model vamos declarar os relacionamentos.
+** Dentro de Competencia.php**
+```php
+  public function dimensao()
+        {
+            return $this->belongsTo(Dimensao::class, 'dimensao_id');
+        }
+    
+```
+
+** No model de Dimensão:**
+```php
+   public function competencias()
+    {
+        return $this->hasMany(Competencia::class, 'dimensao_id');
+    }
+```
 
 
 
