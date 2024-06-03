@@ -164,14 +164,14 @@
 
 ## Configurando chaves estrangeiras
 ### Na tabela de Competência, temos o atributo 'dimensao_id', que indica a qual dimensão essa competência pertence.
-** Para conectar esse atributo com a tabela de dimensões, vamos declarar o atributo assim:**
+**Para conectar esse atributo com a tabela de dimensões, vamos declarar o atributo assim:**
 ```php
   $table->integer('dimensao_id')->unsigned();
   $table->foreign('dimensao_id')->references('id')->on('dimensaos')->onDelete('cascade');
 ```
 
 ### No Model vamos declarar os relacionamentos.
-** Dentro de Competencia.php**
+**Dentro de Competencia.php**
 ```php
   public function dimensao()
         {
@@ -180,7 +180,7 @@
     
 ```
 
-** No model de Dimensão:**
+**No model de Dimensão:**
 ```php
    public function competencias()
     {
